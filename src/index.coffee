@@ -99,5 +99,3 @@ _matchingType = 1, _protocol = 'tcp') ->
   return
 
 module.exports = TlsaBuilder
-
-(new TlsaBuilder('tikatuka.io')).generateValue().then(console.log).catch console.error
