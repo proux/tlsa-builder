@@ -1,0 +1,31 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+node_js:
+- '4'
+- iojs-v3
+- iojs-v2
+- iojs-v1
+- '0.12'
+- '0.10'
+before_install:
+- npm i -g npm@^2.0.0
+before_script:
+- npm prune
+after_success:
+- curl -Lo travis_after_all.py https://git.io/travis_after_all
+- python travis_after_all.py
+- export $(cat .to_export_back) &> /dev/null
+- npm run semantic-release
+after_script:
+  - ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info
+branches:
+  except:
+  - /^v\d+\.\d+\.\d+$/
+addons:
+    code_climate:
+        repo_token: 76a681d36b613129970598a0b0cb1a271beb27c4faba8c3f216648b8f5601622
