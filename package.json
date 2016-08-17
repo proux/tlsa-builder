@@ -26,7 +26,6 @@
   "author": "Nico Lindemann <nico.lindemann@proux.net>",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.3.5",
     "pem": "^1.8.3"
   },
   "devDependencies": {
