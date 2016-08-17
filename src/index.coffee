@@ -1,6 +1,5 @@
 https = require('https')
 crypto = require('crypto')
-Promise = require('bluebird')
 pem = require('pem')
 
 TlsaBuilder = (_domain, _port = 443, _usage = 3, _selector = 0,
