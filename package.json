@@ -26,7 +26,7 @@
   "author": "Nico Lindemann <nico.lindemann@proux.net>",
   "license": "MIT",
   "dependencies": {
-    "pem": "^1.9.4"
+    "pem": "^1.10.2"
   },
   "devDependencies": {
     "@semantic-release/release-notes-generator": "^3.0.1",
