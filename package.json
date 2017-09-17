@@ -39,7 +39,7 @@
     "istanbul": "^0.4.3",
     "nock": "^9.0.14",
     "mocha": "^3.5.3",
-    "semantic-release": "^7.0.1"
+    "semantic-release": "^8.0.0"
   },
   "config": {
     "commitizen": {
