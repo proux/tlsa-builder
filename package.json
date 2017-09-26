@@ -37,7 +37,7 @@
     "coffeelint": "^1.15.7",
     "cz-conventional-changelog": "^2.0.0",
     "istanbul": "^0.4.3",
-    "nock": "^9.0.20",
+    "nock": "^9.0.21",
     "mocha": "^3.5.3",
     "semantic-release": "^8.0.3"
   },
