@@ -11,10 +11,9 @@ notifications:
   slack:
     secure: dBV+r1iCGd/aLC5IczQ+f6z8Dnv4Ch7CJot/Oz5eILXXDSY8FmCicILYNSI8NEBNcQa+kPdQDC3vk6CNS9jXYBTmTaHHDcZ7o969JRWIfwkzRX0nnO0wrNqHuKsJaIU/5BsvLSvAeuA/DEmyAww1d2JCEWKY/mv2niuHdhs89nopwfcZduF+QYv+XrxZcTnQYrV/Xa77YOHCovA6XfPrggOqOPa6gn+/BxrF8GCTOgEu07X9dtKuGEahgacwiBYQaaPmeGwx4RFwW6MPhyAtRpBwMvrjGQR+Y6LRDQ5Dx26ddUNBBFVGfeIApF/WlbyPQDYaSGmvTS85I30sG2qElNO5iTfSKepDfmBKvXu6YSwgjnfqYpMkaaWTtqPWcqIEDSyyzLxZtIkz+AgzibHFMU0IWPRWg64EemKLy0SoFTrX7C7mHJdB7C9AtiohvnN+Zh7e9lAp+jVAhGKk4Zw2EVUCuy4vgZZo0E6NRgOs0uC7s2oQZpOv2AXRyFRYp+dOdMB71Srs0n/h3OoQdmC6w4teiAwY6BU6Caj7fAcO0MHq43XvyEa+CdvSwGLM2j2U8XfierPDH+LaIhWd34402pF9QBPqSDNXS+Blpt3iTQjvovzSNFjYQxuJG8hkAx7EnGLYAospSx3oEc/URjuvZJccsLjSNByhfu9oIsc07M8=
 node_js:
+- '8'
 - '7'
 - '6'
-- '5'
-- '4'
 before_install:
 - npm i -g npm@^2.0.0
 before_script:
