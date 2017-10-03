@@ -4,7 +4,6 @@ const rfc = require('asn1.js-rfc5280')
 const crypto = require('crypto')
 
 class TLSARecord {
-
   constructor (certificate) {
     if (!Buffer.isBuffer(certificate)) {
       certificate = Buffer.from(certificate
