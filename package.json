@@ -23,7 +23,7 @@
     "asn1.js-rfc5280": "^2.0.0"
   },
   "devDependencies": {
-    "@semantic-release/release-notes-generator": "^4.0.5",
+    "@semantic-release/release-notes-generator": "^5.0.0",
     "codeclimate-test-reporter": "^0.5.0",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^4.7.0",
