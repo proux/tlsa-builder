@@ -20,7 +20,7 @@
   "author": "Nico Lindemann <nico.lindemann@proux.net>",
   "license": "MIT",
   "dependencies": {
-    "asn1.js-rfc5280": "^2.0.0"
+    "asn1.js-rfc5280": "^3.0.0"
   },
   "devDependencies": {
     "@semantic-release/release-notes-generator": "^5.0.0",
