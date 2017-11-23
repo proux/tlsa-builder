@@ -20,7 +20,7 @@ before_install:
 before_script:
 - npm prune
 after_success:
-- 'if [ "${TRAVIS_NODE_VERSION}" = "8" ]; then npm run semantic-release ; fi'
+- npm run semantic-release
 after_script:
 - ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info
 branches:
