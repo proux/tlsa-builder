@@ -3,9 +3,6 @@ module.exports = {
   'plugins': [
     'standard'
   ],
-  'parserOptions': {
-    'ecmaVersion': 8
-  },
   'env': {
     'node': true
   }
