@@ -25,12 +25,7 @@
   "devDependencies": {
     "@semantic-release/release-notes-generator": "^7.0.0",
     "codeclimate-test-reporter": "^0.5.0",
-    "eslint": "^5.14.0",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^9.0.0",
     "openssl-self-signed-certificate": "^1.1.6",
     "semantic-release": "^15.9.16",
     "standard": "^12.0.0"
