@@ -11,6 +11,7 @@ module.exports = (req, res) => {
     req.on('data', chunk => { body += chunk.toString() })
     req.on('end', () => {
         body = JSON.parse(body)
+        console.log(body)
         https.get('https://' + body.domain, (resp) => {
             const tlsaRecord = new TLSARecord(resp.connection.getPeerCertificate().raw)
             const result = {  
@@ -23,8 +24,12 @@ module.exports = (req, res) => {
                     body.protocol),
                 status: 'ok'
             }
+            console.log(result)
             res.end(JSON.stringify(result))
-        }).on("error", err => res.end('{"status":"error"}'))
+        }).on("error", err => {
+            console.log(err)
+            res.end('{"status":"error"}')
+        })
     })
   } else if (req.method === 'GET') {
     res.writeHead(301, { "Location": "https://proux.github.io/tlsa-builder/" })
