@@ -3,9 +3,6 @@ const https = require('https')
 
 module.exports = (req, res) => {
   let body = ''
-  res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-  res.setHeader('Content-Type', 'application/json')
   if (req.method === 'POST') {
     req.on('data', chunk => { body += chunk.toString() })
     req.on('end', () => {
@@ -25,5 +22,7 @@ module.exports = (req, res) => {
             res.end(JSON.stringify(result))
         }).on("error", err => res.end('{"status":"error"}'))
     })
+  } else if (req.method === 'GET') {
+    res.writeHead(301, { "Location": "https://proux.github.io/tlsa-builder/" }).end()
   } else { res.end() }
 }
