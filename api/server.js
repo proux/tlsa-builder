@@ -27,6 +27,7 @@ module.exports = (req, res) => {
         }).on("error", err => res.end('{"status":"error"}'))
     })
   } else if (req.method === 'GET') {
-    res.writeHead(301, { "Location": "https://proux.github.io/tlsa-builder/" }).end()
+    res.writeHead(301, { "Location": "https://proux.github.io/tlsa-builder/" })
+    res.end()
   } else { res.end() }
 }
