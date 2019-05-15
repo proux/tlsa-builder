@@ -5,7 +5,7 @@
     ],
     "routes": [
 		{
-			"src": "/",
+            "src": "/.*",
             "dest": "/api/server.js",
             "headers": {
                 "Content-Type": "application/json",

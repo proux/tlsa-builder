@@ -3,6 +3,10 @@ const https = require('https')
 
 module.exports = (req, res) => {
   let body = ''
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept')
+  res.setHeader('Content-Type', 'application/json')
   if (req.method === 'POST') {
     req.on('data', chunk => { body += chunk.toString() })
     req.on('end', () => {
