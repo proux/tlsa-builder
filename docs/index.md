@@ -27,7 +27,7 @@
     var formData = new FormData(e.target)
     var object = {}
     formData.forEach(function(value, key){ object[key] = value })
-    fetch("https://tlsa.now.sh", { method: "POST", body: JSON.stringify(object) })
+    fetch("https://tlsa.now.sh", { method: "POST", body: JSON.stringify(object), mode: 'cors' })
       .then(function(res){ return res.json(); })
       .then(function(data){ 
         document.getElementById('output').innerHTML = data.record
