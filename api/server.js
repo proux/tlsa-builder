@@ -1,5 +1,5 @@
 const TLSARecord = require('../index.js')
-const https = require('https')
+const tls = require('tls')
 
 module.exports = (req, res) => {
   let body = ''
@@ -11,10 +11,9 @@ module.exports = (req, res) => {
     req.on('data', chunk => { body += chunk.toString() })
     req.on('end', () => {
         body = JSON.parse(body)
-        console.log(body)
-        https.get('https://' + body.domain, (resp) => {
-            const tlsaRecord = new TLSARecord(resp.connection.getPeerCertificate().raw)
-            const result = {  
+        tls.connect(parseInt(body.port), body.domain, function() { 
+            const tlsaRecord = new TLSARecord(this.getPeerCertificate().raw)
+            res.end(JSON.stringify({
                 record: tlsaRecord.toString(
                     parseInt(body.usage),
                     parseInt(body.selector),
@@ -23,12 +22,7 @@ module.exports = (req, res) => {
                     parseInt(body.port),
                     body.protocol),
                 status: 'ok'
-            }
-            console.log(result)
-            res.end(JSON.stringify(result))
-        }).on("error", err => {
-            console.log(err)
-            res.end('{"status":"error"}')
+            }))
         })
     })
   } else if (req.method === 'GET') {
