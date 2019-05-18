@@ -3,8 +3,8 @@ const tls = require('tls')
 
 module.exports = (req, res) => {
   let body = ''
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   if (req.method === 'POST') {
     req.on('data', chunk => { body += chunk.toString() })
     req.on('end', () => {
