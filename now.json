@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "scope": "proux",
     "builds": [
         { "src": "api/server.js", "use": "@now/node" }
     ],

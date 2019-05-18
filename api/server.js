@@ -1,9 +1,12 @@
 const TLSARecord = require('../index.js')
 const tls = require('tls')
 
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
+
 module.exports = (req, res) => {
   let body = ''
   res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   if (req.method === 'POST') {
     req.on('data', chunk => { body += chunk.toString() })
