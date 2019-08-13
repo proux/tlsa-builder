@@ -27,7 +27,7 @@ module.exports = (req, res) => {
       })
     })
   } else if (req.method === 'GET') {
-    res.writeHead(301, { 'Location': 'https://proux.github.io/tlsa-builder/' })
+    res.writeHead(301, { Location: 'https://proux.github.io/tlsa-builder/' })
     res.end()
   } else { res.end() }
 }
