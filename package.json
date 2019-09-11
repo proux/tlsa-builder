@@ -4,7 +4,7 @@
   "main": "./index.js",
   "scripts": {
     "test": "standard",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "dane",
