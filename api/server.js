@@ -1,7 +1,7 @@
 const TLSARecord = require('../index.js')
 const tls = require('tls')
 
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 
 module.exports = (req, res) => {
   let body = ''

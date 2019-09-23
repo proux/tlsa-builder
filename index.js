@@ -9,8 +9,8 @@ class TLSARecord {
       certificate = Buffer.from(certificate
         .replace(/\n/g, '')
         .replace(/\r/g, '')
-        .replace(`-----BEGIN CERTIFICATE-----`, '')
-        .replace(`-----END CERTIFICATE-----`, '')
+        .replace('-----BEGIN CERTIFICATE-----', '')
+        .replace('-----END CERTIFICATE-----', '')
         .replace(/ /g, ''), 'base64')
     }
     const asn1 = rfc.Certificate.decode(certificate, 'der')
