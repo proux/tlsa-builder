@@ -3,8 +3,7 @@
   "description": "Creation of TLSA-Records (RFC 6698)",
   "main": "./index.js",
   "scripts": {
-    "test": "standard",
-    "semantic-release": "semantic-release"
+    "test": "standard"
   },
   "keywords": [
     "dane",
@@ -23,8 +22,6 @@
     "asn1.js-rfc5280": "^3.0.0"
   },
   "devDependencies": {
-    "@semantic-release/release-notes-generator": "^7.3.0",
-    "semantic-release": "^15.13.24",
     "standard": "^14.3.1"
   }
 }
