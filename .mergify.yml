@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: automatic merge on CI success
+    conditions:
+      - status-success=AccessLint
+      - status-success~=build
+      - status-success=now
+      - status-success=security/snyk (proux)
+    actions:
+      merge:
+        method: merge
