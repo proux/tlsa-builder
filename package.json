@@ -22,6 +22,6 @@
     "asn1.js-rfc5280": "^3.0.0"
   },
   "devDependencies": {
-    "standard": "^15.0.1"
+    "standard": "^16.0.1"
   }
 }
