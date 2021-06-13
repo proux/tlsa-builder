@@ -69,3 +69,4 @@ out
 /yarn.lock
 /.idea/
 package-lock.json
+.vercel

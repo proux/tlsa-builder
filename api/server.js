@@ -12,7 +12,7 @@ module.exports = (req, res) => {
     req.on('data', chunk => { body += chunk.toString() })
     req.on('end', () => {
       body = JSON.parse(body)
-      tls.connect(parseInt(body.port), body.domain, function () {
+      const socket = tls.connect(parseInt(body.port), body.domain, function () {
         const tlsaRecord = new TLSARecord(this.getPeerCertificate().raw)
         res.end(JSON.stringify({
           record: tlsaRecord.toString(
@@ -23,6 +23,13 @@ module.exports = (req, res) => {
             parseInt(body.port),
             body.protocol),
           status: 'ok'
+        }))
+      })
+      socket.setTimeout(1000)
+      socket.on('timeout', () => {
+        socket.end()
+        res.end(JSON.stringify({
+          record: 'TIMEOUT'
         }))
       })
     })
